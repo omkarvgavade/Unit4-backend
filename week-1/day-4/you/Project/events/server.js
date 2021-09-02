@@ -25,12 +25,14 @@ function checkEvent() {
     readline1.question("press 1 to see all books/press 2 to update the store/press 3 to quit \n", (btn) => {
         if (btn == "1") {
             BooksEvent.emit("press 1", books)
-            readline1.close()
+            checkEvent()
+
 
         } else if (btn == "2") {
             readline1.question("Enter the book which you want to add \n", (par) => {
                 BooksEvent.emit("press 2", { books: books, newBook: par });
-                readline1.close()
+                checkEvent()
+
 
             })
 
