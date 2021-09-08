@@ -1,0 +1,2641 @@
+Microsoft Windows [Version 10.0.19043.1110]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Omkar Gawade>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("4e796303-7d5b-4009-abea-c4dd52db446c") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-07T10:13:57.347+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> use ninjas
+switched to db ninjas
+> show collections
+bravo
+movies
+students
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.find({$eq:{"movie_name":"Dottie Gets Spanked"}})
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $eq. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({"movie_name":{$eq:{"Dottie Gets Spanked"}}})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:56
+> db.movies.find({"movie_name":{$eq:"Dottie Gets Spanked"}})
+{ "_id" : ObjectId("61386358cc51710d5cd1f112"), "id" : 20, "movie_name" : "Dottie Gets Spanked", "movie_genre" : "Drama", "production_year" : 2016, "budget" : 14361 }
+> db.movies.find({"movie_name":{$eq:"Dottie Gets Spanked"}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+> db.movies.find({"movie_name":{$neq:"Dottie Gets Spanked"}}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $neq",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({"movie_name":{$ne:"Dottie Gets Spanked"}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+Type "it" for more
+> db.movies.find({"budget":{$gt:10000}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.find({"budget":{$gte:10000}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.find({"budget":{$lt:10000}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11a"),
+        "id" : 28,
+        "movie_name" : "Must Read After My Death",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 9903
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f124"),
+        "id" : 38,
+        "movie_name" : "College",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 9052
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f136"),
+        "id" : 56,
+        "movie_name" : "Sport, Sport, Sport",
+        "movie_genre" : "Comedy|Documentary",
+        "production_year" : 2009,
+        "budget" : 9790
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f138"),
+        "id" : 58,
+        "movie_name" : "Panic",
+        "movie_genre" : "Action|Thriller",
+        "production_year" : 2013,
+        "budget" : 9893
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13d"),
+        "id" : 63,
+        "movie_name" : "Fuel",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 9614
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13e"),
+        "id" : 64,
+        "movie_name" : "Paper, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2017,
+        "budget" : 9061
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13f"),
+        "id" : 65,
+        "movie_name" : "Tom & Thomas",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 1999,
+        "budget" : 9772
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f14b"),
+        "id" : 77,
+        "movie_name" : "Amityville 1992: It's About Time",
+        "movie_genre" : "Horror",
+        "production_year" : 1999,
+        "budget" : 9809
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f156"),
+        "id" : 88,
+        "movie_name" : "Creeping Flesh, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2009,
+        "budget" : 9120
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f160"),
+        "id" : 98,
+        "movie_name" : "Unholy Rollers, The",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 2015,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f176"),
+        "id" : 120,
+        "movie_name" : "Breathless (À bout de souffle)",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 9463
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f182"),
+        "id" : 132,
+        "movie_name" : "Proof",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 9431
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f188"),
+        "id" : 138,
+        "movie_name" : "Criminal",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 9256
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f196"),
+        "id" : 152,
+        "movie_name" : "Ten",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 9020
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1a1"),
+        "id" : 163,
+        "movie_name" : "Icon",
+        "movie_genre" : "Action|Adventure|Crime|Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 9515
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1a5"),
+        "id" : 167,
+        "movie_name" : "Night of the Generals, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller|War",
+        "production_year" : 2008,
+        "budget" : 9900
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1be"),
+        "id" : 192,
+        "movie_name" : "Same Love, Same Rain (El mismo amor, la misma lluvia)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 9975
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1e8"),
+        "id" : 234,
+        "movie_name" : "Moon",
+        "movie_genre" : "Drama|Mystery|Sci-Fi|Thriller",
+        "production_year" : 1998,
+        "budget" : 9687
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1f4"),
+        "id" : 246,
+        "movie_name" : "Virgin Territory",
+        "movie_genre" : "Adventure|Comedy|Romance",
+        "production_year" : 1993,
+        "budget" : 9334
+}
+Type "it" for more
+> db.movies.find({"budget":{$lte:10000}}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11a"),
+        "id" : 28,
+        "movie_name" : "Must Read After My Death",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 9903
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f124"),
+        "id" : 38,
+        "movie_name" : "College",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 9052
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f136"),
+        "id" : 56,
+        "movie_name" : "Sport, Sport, Sport",
+        "movie_genre" : "Comedy|Documentary",
+        "production_year" : 2009,
+        "budget" : 9790
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f138"),
+        "id" : 58,
+        "movie_name" : "Panic",
+        "movie_genre" : "Action|Thriller",
+        "production_year" : 2013,
+        "budget" : 9893
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13d"),
+        "id" : 63,
+        "movie_name" : "Fuel",
+        "movie_genre" : "Documentary",
+        "production_year" : 2002,
+        "budget" : 9614
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13e"),
+        "id" : 64,
+        "movie_name" : "Paper, The",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2017,
+        "budget" : 9061
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13f"),
+        "id" : 65,
+        "movie_name" : "Tom & Thomas",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 1999,
+        "budget" : 9772
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f14b"),
+        "id" : 77,
+        "movie_name" : "Amityville 1992: It's About Time",
+        "movie_genre" : "Horror",
+        "production_year" : 1999,
+        "budget" : 9809
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f156"),
+        "id" : 88,
+        "movie_name" : "Creeping Flesh, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2009,
+        "budget" : 9120
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f160"),
+        "id" : 98,
+        "movie_name" : "Unholy Rollers, The",
+        "movie_genre" : "Action|Comedy|Drama",
+        "production_year" : 2015,
+        "budget" : 9122
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f176"),
+        "id" : 120,
+        "movie_name" : "Breathless (À bout de souffle)",
+        "movie_genre" : "Crime|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 9463
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f182"),
+        "id" : 132,
+        "movie_name" : "Proof",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2008,
+        "budget" : 9431
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f188"),
+        "id" : 138,
+        "movie_name" : "Criminal",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2004,
+        "budget" : 9256
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f196"),
+        "id" : 152,
+        "movie_name" : "Ten",
+        "movie_genre" : "Drama",
+        "production_year" : 2004,
+        "budget" : 9020
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1a1"),
+        "id" : 163,
+        "movie_name" : "Icon",
+        "movie_genre" : "Action|Adventure|Crime|Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 9515
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1a5"),
+        "id" : 167,
+        "movie_name" : "Night of the Generals, The",
+        "movie_genre" : "Crime|Drama|Mystery|Thriller|War",
+        "production_year" : 2008,
+        "budget" : 9900
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1be"),
+        "id" : 192,
+        "movie_name" : "Same Love, Same Rain (El mismo amor, la misma lluvia)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 9975
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1e8"),
+        "id" : 234,
+        "movie_name" : "Moon",
+        "movie_genre" : "Drama|Mystery|Sci-Fi|Thriller",
+        "production_year" : 1998,
+        "budget" : 9687
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1f4"),
+        "id" : 246,
+        "movie_name" : "Virgin Territory",
+        "movie_genre" : "Adventure|Comedy|Romance",
+        "production_year" : 1993,
+        "budget" : 9334
+}
+Type "it" for more
+> db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}).pretty()
+... db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]).pretty()
+... db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+... db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+... ^C
+
+>  db.movies.find({$and:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f114"),
+        "id" : 22,
+        "movie_name" : "Climb, The",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 2021,
+        "budget" : 19017
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f115"),
+        "id" : 23,
+        "movie_name" : "Adventures of the Wilderness Family, The",
+        "movie_genre" : "Adventure|Children|Drama",
+        "production_year" : 2018,
+        "budget" : 19860
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f116"),
+        "id" : 24,
+        "movie_name" : "Night of Dark Shadows",
+        "movie_genre" : "Drama|Horror|Mystery|Romance|Thriller",
+        "production_year" : 2020,
+        "budget" : 13906
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f119"),
+        "id" : 27,
+        "movie_name" : "When Willie Comes Marching Home",
+        "movie_genre" : "Comedy|War",
+        "production_year" : 2020,
+        "budget" : 14903
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11b"),
+        "id" : 29,
+        "movie_name" : "Helter Skelter",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 19134
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11c"),
+        "id" : 30,
+        "movie_name" : "Another Thin Man",
+        "movie_genre" : "Comedy|Crime|Drama|Mystery|Romance",
+        "production_year" : 2004,
+        "budget" : 15673
+}
+Type "it" for more
+> db.movies.find({$or:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.find({$nor:[{"budget":{$gt:10000}},{"production_year":{$gt:2000}}]}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f124"),
+        "id" : 38,
+        "movie_name" : "College",
+        "movie_genre" : "Comedy",
+        "production_year" : 1994,
+        "budget" : 9052
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f13f"),
+        "id" : 65,
+        "movie_name" : "Tom & Thomas",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 1999,
+        "budget" : 9772
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f14b"),
+        "id" : 77,
+        "movie_name" : "Amityville 1992: It's About Time",
+        "movie_genre" : "Horror",
+        "production_year" : 1999,
+        "budget" : 9809
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1a1"),
+        "id" : 163,
+        "movie_name" : "Icon",
+        "movie_genre" : "Action|Adventure|Crime|Drama|Thriller",
+        "production_year" : 1999,
+        "budget" : 9515
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1be"),
+        "id" : 192,
+        "movie_name" : "Same Love, Same Rain (El mismo amor, la misma lluvia)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 1998,
+        "budget" : 9975
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1e8"),
+        "id" : 234,
+        "movie_name" : "Moon",
+        "movie_genre" : "Drama|Mystery|Sci-Fi|Thriller",
+        "production_year" : 1998,
+        "budget" : 9687
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1f4"),
+        "id" : 246,
+        "movie_name" : "Virgin Territory",
+        "movie_genre" : "Adventure|Comedy|Romance",
+        "production_year" : 1993,
+        "budget" : 9334
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1f5"),
+        "id" : 247,
+        "movie_name" : "Take a Girl Like You",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2000,
+        "budget" : 9398
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f20b"),
+        "id" : 269,
+        "movie_name" : "Oh, Susanna!",
+        "movie_genre" : "Romance|Western",
+        "production_year" : 1994,
+        "budget" : 9971
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f213"),
+        "id" : 277,
+        "movie_name" : "The Little Kidnappers",
+        "movie_genre" : "Drama|Romance|War",
+        "production_year" : 1998,
+        "budget" : 9604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f241"),
+        "id" : 323,
+        "movie_name" : "Breaking Up",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1999,
+        "budget" : 9663
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f25e"),
+        "id" : 352,
+        "movie_name" : "Harmful Insect (Gaichu)",
+        "movie_genre" : "Drama",
+        "production_year" : 1996,
+        "budget" : 9063
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f284"),
+        "id" : 390,
+        "movie_name" : "Santa Fe Trail",
+        "movie_genre" : "Drama|Romance|Western",
+        "production_year" : 1997,
+        "budget" : 9904
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2c4"),
+        "id" : 454,
+        "movie_name" : "Lonesome Dove",
+        "movie_genre" : "Adventure|Drama|Western",
+        "production_year" : 1998,
+        "budget" : 9342
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2d3"),
+        "id" : 469,
+        "movie_name" : "Kull the Conqueror",
+        "movie_genre" : "Action|Adventure",
+        "production_year" : 1998,
+        "budget" : 9468
+}
+> db.movies.find({$or:[{"budget":{$not:10000}},{"production_year":{$not:2000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$not needs a regex or a document",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({$or:[{"budget":{$Not:10000}},{"production_year":{$Not:2000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $Not",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({$or:[{"budget":{$nt:10000}},{"production_year":{$nt:2000}}]}).pretty()
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown operator: $nt",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+> db.movies.find({$or:[{"budget":{$ne:10000}},{"production_year":{$ne:2000}}]}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "movie_genre" : "Documentary",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "movie_genre" : "Action|Comedy|War",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.find({$and:[{"production_year":{$gt:2000}},{"production_year":{$lt:2020}}]}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "movie_genre" : "Comedy|Crime",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "movie_genre" : "Adventure|Fantasy",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "movie_genre" : "Drama",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "movie_genre" : "Drama",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f115"),
+        "id" : 23,
+        "movie_name" : "Adventures of the Wilderness Family, The",
+        "movie_genre" : "Adventure|Children|Drama",
+        "production_year" : 2018,
+        "budget" : 19860
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11a"),
+        "id" : 28,
+        "movie_name" : "Must Read After My Death",
+        "movie_genre" : "Documentary",
+        "production_year" : 2009,
+        "budget" : 9903
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11b"),
+        "id" : 29,
+        "movie_name" : "Helter Skelter",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2004,
+        "budget" : 19134
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11c"),
+        "id" : 30,
+        "movie_name" : "Another Thin Man",
+        "movie_genre" : "Comedy|Crime|Drama|Mystery|Romance",
+        "production_year" : 2004,
+        "budget" : 15673
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11d"),
+        "id" : 31,
+        "movie_name" : "Where Sleeping Dogs Lie",
+        "movie_genre" : "Crime",
+        "production_year" : 2009,
+        "budget" : 14156
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11e"),
+        "id" : 32,
+        "movie_name" : "Mephisto",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2006,
+        "budget" : 13255
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f11f"),
+        "id" : 33,
+        "movie_name" : "Good Student, The (Mr. Gibb)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 16103
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":1}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f118"),
+        "id" : 26,
+        "movie_name" : "Best and the Brightest, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 14600
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f137"),
+        "id" : 57,
+        "movie_name" : "Infernal Affairs III (Mou gaan dou III: Jung gik mou gaan)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1990,
+        "budget" : 11559
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f171"),
+        "id" : 115,
+        "movie_name" : "Big Momma's House 2",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 1990,
+        "budget" : 17047
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f179"),
+        "id" : 123,
+        "movie_name" : "The Importance of Being Earnest",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1990,
+        "budget" : 14745
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f186"),
+        "id" : 136,
+        "movie_name" : "Neurons to Nirvana",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 16522
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1b5"),
+        "id" : 183,
+        "movie_name" : "Blown Away",
+        "movie_genre" : "Action|Thriller",
+        "production_year" : 1990,
+        "budget" : 15129
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1c9"),
+        "id" : 203,
+        "movie_name" : "When the Game Stands Tall",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 17544
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1e0"),
+        "id" : 226,
+        "movie_name" : "Higher Learning",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 14941
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f222"),
+        "id" : 292,
+        "movie_name" : "September",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16811
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f224"),
+        "id" : 294,
+        "movie_name" : "Steel Magnolias",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 19746
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f274"),
+        "id" : 374,
+        "movie_name" : "Ice Rink, The (La patinoire)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1990,
+        "budget" : 17243
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2aa"),
+        "id" : 428,
+        "movie_name" : "Ruby",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1990,
+        "budget" : 14360
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2af"),
+        "id" : 433,
+        "movie_name" : "Noel",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16765
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2b5"),
+        "id" : 439,
+        "movie_name" : "The Connection",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1990,
+        "budget" : 11632
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2ea"),
+        "id" : 492,
+        "movie_name" : "Clockers",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 1990,
+        "budget" : 19621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f12b"),
+        "id" : 45,
+        "movie_name" : "Phone Call from a Stranger",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14607
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f132"),
+        "id" : 52,
+        "movie_name" : "From Dad to Son",
+        "movie_genre" : "Animation|Drama",
+        "production_year" : 1991,
+        "budget" : 19254
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f135"),
+        "id" : 55,
+        "movie_name" : "I Love Your Work",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 1991,
+        "budget" : 10306
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":1,"first_name":1}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f118"),
+        "id" : 26,
+        "movie_name" : "Best and the Brightest, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 1990,
+        "budget" : 14600
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f137"),
+        "id" : 57,
+        "movie_name" : "Infernal Affairs III (Mou gaan dou III: Jung gik mou gaan)",
+        "movie_genre" : "Action|Crime|Drama|Thriller",
+        "production_year" : 1990,
+        "budget" : 11559
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f171"),
+        "id" : 115,
+        "movie_name" : "Big Momma's House 2",
+        "movie_genre" : "Action|Comedy|Crime",
+        "production_year" : 1990,
+        "budget" : 17047
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f179"),
+        "id" : 123,
+        "movie_name" : "The Importance of Being Earnest",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1990,
+        "budget" : 14745
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f186"),
+        "id" : 136,
+        "movie_name" : "Neurons to Nirvana",
+        "movie_genre" : "Documentary",
+        "production_year" : 1990,
+        "budget" : 16522
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1b5"),
+        "id" : 183,
+        "movie_name" : "Blown Away",
+        "movie_genre" : "Action|Thriller",
+        "production_year" : 1990,
+        "budget" : 15129
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1c9"),
+        "id" : 203,
+        "movie_name" : "When the Game Stands Tall",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 17544
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1e0"),
+        "id" : 226,
+        "movie_name" : "Higher Learning",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 14941
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f222"),
+        "id" : 292,
+        "movie_name" : "September",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16811
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f224"),
+        "id" : 294,
+        "movie_name" : "Steel Magnolias",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 19746
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f274"),
+        "id" : 374,
+        "movie_name" : "Ice Rink, The (La patinoire)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 1990,
+        "budget" : 17243
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2aa"),
+        "id" : 428,
+        "movie_name" : "Ruby",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1990,
+        "budget" : 14360
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2af"),
+        "id" : 433,
+        "movie_name" : "Noel",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 16765
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2b5"),
+        "id" : 439,
+        "movie_name" : "The Connection",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 1990,
+        "budget" : 11632
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2ea"),
+        "id" : 492,
+        "movie_name" : "Clockers",
+        "movie_genre" : "Crime|Drama|Mystery",
+        "production_year" : 1990,
+        "budget" : 19621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f113"),
+        "id" : 21,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 1991,
+        "budget" : 9021
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f12b"),
+        "id" : 45,
+        "movie_name" : "Phone Call from a Stranger",
+        "movie_genre" : "Drama",
+        "production_year" : 1991,
+        "budget" : 14607
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f132"),
+        "id" : 52,
+        "movie_name" : "From Dad to Son",
+        "movie_genre" : "Animation|Drama",
+        "production_year" : 1991,
+        "budget" : 19254
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f135"),
+        "id" : 55,
+        "movie_name" : "I Love Your Work",
+        "movie_genre" : "Drama|Mystery",
+        "production_year" : 1991,
+        "budget" : 10306
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":-1,"first_name":1}).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f114"),
+        "id" : 22,
+        "movie_name" : "Climb, The",
+        "movie_genre" : "Action|Adventure|Drama",
+        "production_year" : 2021,
+        "budget" : 19017
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f127"),
+        "id" : 41,
+        "movie_name" : "Welcome to Mooseport",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 17567
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f143"),
+        "id" : 69,
+        "movie_name" : "Deadline at Dawn",
+        "movie_genre" : "Film-Noir|Mystery|Romance|Thriller",
+        "production_year" : 2021,
+        "budget" : 14769
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1bb"),
+        "id" : 189,
+        "movie_name" : "Too Beautiful for You (Trop belle pour toi)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2021,
+        "budget" : 15902
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1f9"),
+        "id" : 251,
+        "movie_name" : "Louis C.K.: Hilarious",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 18251
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f212"),
+        "id" : 276,
+        "movie_name" : "Possession, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2021,
+        "budget" : 17395
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f22a"),
+        "id" : 300,
+        "movie_name" : "Grass: A Nation's Battle for Life",
+        "movie_genre" : "Documentary",
+        "production_year" : 2021,
+        "budget" : 15359
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f238"),
+        "id" : 314,
+        "movie_name" : "Threesome",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2021,
+        "budget" : 12582
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f253"),
+        "id" : 341,
+        "movie_name" : "National Lampoon's Pucked",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 15100
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f288"),
+        "id" : 394,
+        "movie_name" : "Crawling Hand, The",
+        "movie_genre" : "Horror|Sci-Fi",
+        "production_year" : 2021,
+        "budget" : 14559
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f28c"),
+        "id" : 398,
+        "movie_name" : "Schlussmacher",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 13345
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f296"),
+        "id" : 408,
+        "movie_name" : "Traffic",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2021,
+        "budget" : 13217
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f2b6"),
+        "id" : 440,
+        "movie_name" : "O",
+        "movie_genre" : "Drama",
+        "production_year" : 2021,
+        "budget" : 10132
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f116"),
+        "id" : 24,
+        "movie_name" : "Night of Dark Shadows",
+        "movie_genre" : "Drama|Horror|Mystery|Romance|Thriller",
+        "production_year" : 2020,
+        "budget" : 13906
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f119"),
+        "id" : 27,
+        "movie_name" : "When Willie Comes Marching Home",
+        "movie_genre" : "Comedy|War",
+        "production_year" : 2020,
+        "budget" : 14903
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f123"),
+        "id" : 37,
+        "movie_name" : "How I Killed My Father (a.k.a. My Father and I) (Comment j'ai tué mon Père)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 10732
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f162"),
+        "id" : 100,
+        "movie_name" : "Littlerock",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14490
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f198"),
+        "id" : 154,
+        "movie_name" : "Once You're Born You Can No Longer Hide (Quando sei nato non puoi più nasconderti)",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 2020,
+        "budget" : 19695
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f19b"),
+        "id" : 157,
+        "movie_name" : "No Time for Love",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 14035
+}
+Type "it" for more
+> db.movies.find().sort({"production_year":-1,"first_name":1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f253"),
+        "id" : 341,
+        "movie_name" : "National Lampoon's Pucked",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 15100
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f212"),
+        "id" : 276,
+        "movie_name" : "Possession, The",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2021,
+        "budget" : 17395
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f127"),
+        "id" : 41,
+        "movie_name" : "Welcome to Mooseport",
+        "movie_genre" : "Comedy",
+        "production_year" : 2021,
+        "budget" : 17567
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f162"),
+        "id" : 100,
+        "movie_name" : "Littlerock",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14490
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f1d3"),
+        "id" : 213,
+        "movie_name" : "Kings of Recycling (Kierrätyksen kuninkaat)",
+        "movie_genre" : "Documentary",
+        "production_year" : 2020,
+        "budget" : 14728
+}
+> db.movies.sort({"production_year":-1,"first_name":1}).limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.sort is not a function :
+@(shell):1:1
+> db.movies.find().sort({"production_year":-1,"first_name":1}).limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.find(...).sort(...).limit(...).remove is not a function :
+@(shell):1:1
+> db.movies.find().sort({"production_year":-1,"first_name":1}).limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.find(...).sort(...).limit(...).remove is not a function :
+@(shell):1:1
+> db.movies.limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.limit is not a function :
+@(shell):1:1
+> db.movies.find().limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.find(...).limit(...).remove is not a function :
+@(shell):1:1
+> db.movies.find().limit(10).pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "movie_genre" : "Drama",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "movie_genre" : "Sci-Fi|Thriller",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "movie_genre" : "Children",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "movie_genre" : "Horror",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "movie_genre" : "Adventure|Romance",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "movie_genre" : "Thriller",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "movie_genre" : "Drama",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "movie_genre" : "Action|Adventure|Documentary",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+> db.movies.find().limit(10).remove({"movie_genre":1}).pretty()
+uncaught exception: TypeError: db.movies.find(...).limit(...).remove is not a function :
+@(shell):1:1
+> db.movies.find().limit(10).remove({"movie_genre":"Drama"}).pretty()
+uncaught exception: TypeError: db.movies.find(...).limit(...).remove is not a function :
+@(shell):1:1
+> db.movies.find().remove({"movie_genre":1})
+uncaught exception: TypeError: db.movies.find(...).remove is not a function :
+@(shell):1:1
+> db.movies.remove({"movie_genre":1}).limit(10)
+uncaught exception: TypeError: db.movies.remove(...).limit is not a function :
+@(shell):1:1
+> db.movies.remove({"movie_genre":1})
+WriteResult({ "nRemoved" : 0 })
+> db.movies.updateMany({$unset:{"movie_genre":1}})
+uncaught exception: TypeError: can't convert undefined to object :
+DBCollection.prototype.updateMany@src/mongo/shell/crud_api.js:648:20
+@(shell):1:1
+> db.movies.update({},{"$unset":{"movie_genre":""}},{"multi":true})
+WriteResult({ "nMatched" : 500, "nUpserted" : 0, "nModified" : 500 })
+> db.movies.update({},{"$unset":{"movie_genre":""}},{"multi":true}).limit(10)
+uncaught exception: TypeError: db.movies.update(...).limit is not a function :
+@(shell):1:1
+> db.movies.find().pretty()
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f0ff"),
+        "id" : 1,
+        "movie_name" : "Long Walk Home, The",
+        "production_year" : 2002,
+        "budget" : 18577
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f100"),
+        "id" : 2,
+        "movie_name" : "Shunning, The",
+        "production_year" : 1990,
+        "budget" : 18382
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f101"),
+        "id" : 3,
+        "movie_name" : "Atomic Submarine, The",
+        "production_year" : 2004,
+        "budget" : 12896
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f102"),
+        "id" : 4,
+        "movie_name" : "Baby-Sitters Club, The",
+        "production_year" : 2014,
+        "budget" : 15959
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f103"),
+        "id" : 5,
+        "movie_name" : "Perez Family, The",
+        "production_year" : 2020,
+        "budget" : 17136
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f104"),
+        "id" : 6,
+        "movie_name" : "It's Alive",
+        "production_year" : 2001,
+        "budget" : 10449
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f105"),
+        "id" : 7,
+        "movie_name" : "Wings in the Dark",
+        "production_year" : 1993,
+        "budget" : 17523
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f106"),
+        "id" : 8,
+        "movie_name" : "Legal Deceit",
+        "production_year" : 2010,
+        "budget" : 12963
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f107"),
+        "id" : 9,
+        "movie_name" : "Glengarry Glen Ross",
+        "production_year" : 1994,
+        "budget" : 10341
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f108"),
+        "id" : 10,
+        "movie_name" : "Dust to Glory",
+        "production_year" : 2016,
+        "budget" : 11922
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f109"),
+        "id" : 11,
+        "movie_name" : "One for the Money",
+        "production_year" : 2005,
+        "budget" : 13621
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10a"),
+        "id" : 12,
+        "movie_name" : "The Finzi Detective Agency",
+        "production_year" : 2003,
+        "budget" : 18773
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10b"),
+        "id" : 13,
+        "movie_name" : "Welcome to Collinwood",
+        "production_year" : 1995,
+        "budget" : 11604
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10c"),
+        "id" : 14,
+        "movie_name" : "The Forgotten Space",
+        "production_year" : 1997,
+        "budget" : 10563
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10d"),
+        "id" : 15,
+        "movie_name" : "Lost World, The",
+        "production_year" : 2003,
+        "budget" : 11094
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10e"),
+        "id" : 16,
+        "movie_name" : "Sleeping Beauty",
+        "production_year" : 2007,
+        "budget" : 12794
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f10f"),
+        "id" : 17,
+        "movie_name" : "Kelly's Heroes",
+        "production_year" : 1993,
+        "budget" : 13248
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f110"),
+        "id" : 18,
+        "movie_name" : "Trash",
+        "production_year" : 2001,
+        "budget" : 12378
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f111"),
+        "id" : 19,
+        "movie_name" : "Pushing Hands (Tui shou)",
+        "production_year" : 2017,
+        "budget" : 17865
+}
+{
+        "_id" : ObjectId("61386358cc51710d5cd1f112"),
+        "id" : 20,
+        "movie_name" : "Dottie Gets Spanked",
+        "production_year" : 2016,
+        "budget" : 14361
+}
+Type "it" for more
+> db.movies.skip(590).update({},{"$unset":{"movie_genre":""}},{"multi":true})
+uncaught exception: TypeError: db.movies.skip is not a function :
+@(shell):1:1
+> db.movies.find().sort({"production_year":-1,"first_name":1}).skip(10).update({},{"$unset":{"movie_genre":""}},{"multi":true})
+uncaught exception: TypeError: db.movies.find(...).sort(...).skip(...).update is not a function :
+@(shell):1:1
+> db.movies.find().sort({"production_year":-1,"first_name":1}).update({},{"$unset":{"movie_genre":""}},{"multi":true})
+uncaught exception: TypeError: db.movies.find(...).sort(...).update is not a function :
+@(shell):1:1
+>
+
+
