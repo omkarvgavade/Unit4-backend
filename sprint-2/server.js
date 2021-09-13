@@ -22,7 +22,7 @@ const instructorSchema = new mongoose.Schema({
     last_name: { type: String, required: true },
     expertise: { type: String, required: true }
 })
-
+const Instructor = mongoose.model("instructor", instructorSchema)
 //creating model for batch
 const batchSchema = new mongoose.Schema({
     batch_name: { type: String, required: true },
@@ -31,8 +31,9 @@ const batchSchema = new mongoose.Schema({
     noOfStudents: { type: Number, required: true },
     noOfBoys: { type: Number, required: true },
     noOfGirls: { type: Number, required: true },
-    codingInstructorId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "instructor" },
-    dsaInstructorId: { type: mongoose.Schema.Types.ObjectId, required: true, ref: "instructor" }
+    codingInstructorId: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "instructor" }],
+    dsaInstructorId: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "instructor" }],
+    csbtInstructor: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: "instructor" }]
 })
 
 const Batch = mongoose.model('batch', batchSchema)
@@ -61,10 +62,15 @@ app.post('/instructors', async (req, res) => {
     res.status(201).send({ instructor })
 })
 
+app.post('/courses', async (req, res) => {
+    const course = await Course.create(req.body);
+    res.status(201).send({ course })
+})
+
 
 //1) find all students who are older than 18
 app.get('/students', async (req, res) => {
-    const students = await Student.find({ $gt: { "age": 18 } });
+    const students = await Student.find({ "age": { $gt: 18 } }).lean().exec();
     res.status(200).send({ students })
 })
 app.post('/students', async (req, res) => {
@@ -74,32 +80,48 @@ app.post('/students', async (req, res) => {
 
 //2) find all the students who have applied for full stack web development course
 app.get("/students/course/:id", async (req, res) => {
-    const students = await Student.find({ "courseId": { "_id": req.params.id } }).lean().exec()
+    const students = await Student.find({ "courseId": { "_id": req.params.id } }).populate("courseId").populate("batchId").lean().exec()
     res.status(200).send({ students })
 })
 
 // 3) find number of students those are men and those are women
 app.get("/students/men", async (req, res) => {
-    const menStudents = await Student.find({ "gender": "male" }).lean().exec()
-    res.status(200).send(menStudents.length)
+    const menStudents = await Student.find({ "gender": "male" }).count()
+    res.status(200).send({ menStudents })
 })
 
 app.get("/students/women", async (req, res) => {
-    const womenStudents = await Student.find({ "gender": "female" }).lean().exec()
-    res.status(200).send(womenStudents.length)
+    const womenStudents = await Student.find({ "gender": "female" }).count()
+    res.status(200).send({ womenStudents })
 })
 
 
 // 4) total number of students on site
 app.get('/studentscount', async (req, res) => {
-    const students = await Student.find();
-    res.status(200).send(students.length)
+    const students = await Student.find().count();
+    res.status(200).send({ students })
 })
 
 // 5) find the batch which has most students
-// app.get('/batches', async (req, res) => {
-//     const batch = await Batch.find({"noOfStudents"})
-// })
+app.get('/batches/noOfStudents', async (req, res) => {
+
+    const batch = await Batch.find().sort({ "noOfStudents": -1 }).limit(1).lean().exec();
+    res.status(200).send({ batch })
+})
+
+//get for courses ,batches,instructors
+app.get('/courses', async (req, res) => {
+    const courses = await Course.find().lean().exec();
+    res.status(200).send({ courses })
+})
+app.get('/batches', async (req, res) => {
+    const batches = await Batch.find().lean().exec();
+    res.status(200).send({ batches })
+})
+app.get('/instructors', async (req, res) => {
+    const instructors = await Instructor.find().lean().exec();
+    res.status(200).send({ instructors })
+})
 
 app.listen(2345, async function () {
     await connect();
