@@ -108,7 +108,11 @@ app.get('/batches/noOfStudents', async (req, res) => {
     const batch = await Batch.find().sort({ "noOfStudents": -1 }).limit(1).lean().exec();
     res.status(200).send({ batch })
 })
-
+// 6) find the instructor which is currently teaching most number of students
+app.get('/batches/instructor', async (req, res) => {
+    const batch = await Batch.find().sort({ "noOfStudents": -1 }).limit(1).lean().exec();
+    res.status(200).send({ batch })
+})
 //get for courses ,batches,instructors
 app.get('/courses', async (req, res) => {
     const courses = await Course.find().lean().exec();
@@ -118,9 +122,9 @@ app.get('/batches', async (req, res) => {
     const batches = await Batch.find().lean().exec();
     res.status(200).send({ batches })
 })
-app.get('/instructors', async (req, res) => {
-    const instructors = await Instructor.find().lean().exec();
-    res.status(200).send({ instructors })
+app.get('/batches/instructors/:id', async (req, res) => {
+    const instructor = await Batch.find({ "csbtInstructor": req.params.id }).sort({ "noOfStudents": -1 }).limit(1).populate("csbtInstructor").lean().exec();
+    res.status(200).send({ instructor })
 })
 
 app.listen(2345, async function () {
