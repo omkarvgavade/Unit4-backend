@@ -6,7 +6,7 @@ const connect = () => {
 }
 
 const app = express()
-
+app.use(express.json())
 //creating model for courses 
 const courseSchema = new mongoose.Schema({
     title: { type: String, required: true },
@@ -52,17 +52,55 @@ const Student = new mongoose.model("student", studentSchema);
 
 
 //CRUD operations for finding different queries
+app.post('/batches', async (req, res) => {
+    const batch = await Batch.create(req.body);
+    res.status(201).send({ batch })
+})
+app.post('/instructors', async (req, res) => {
+    const instructor = await Instructor.create(req.body);
+    res.status(201).send({ instructor })
+})
+
+
 //1) find all students who are older than 18
 app.get('/students', async (req, res) => {
     const students = await Student.find({ $gt: { "age": 18 } });
     res.status(200).send({ students })
 })
+app.post('/students', async (req, res) => {
+    const student = await Student.create(req.body);
+    res.status(201).send({ student })
+})
 
 //2) find all the students who have applied for full stack web development course
-app.get("students/course/:id", async (req, res) => {
+app.get("/students/course/:id", async (req, res) => {
     const students = await Student.find({ "courseId": { "_id": req.params.id } }).lean().exec()
     res.status(200).send({ students })
 })
+
+// 3) find number of students those are men and those are women
+app.get("/students/men", async (req, res) => {
+    const menStudents = await Student.find({ "gender": "male" }).lean().exec()
+    res.status(200).send(menStudents.length)
+})
+
+app.get("/students/women", async (req, res) => {
+    const womenStudents = await Student.find({ "gender": "female" }).lean().exec()
+    res.status(200).send(womenStudents.length)
+})
+
+
+// 4) total number of students on site
+app.get('/studentscount', async (req, res) => {
+    const students = await Student.find();
+    res.status(200).send(students.length)
+})
+
+// 5) find the batch which has most students
+// app.get('/batches', async (req, res) => {
+//     const batch = await Batch.find({"noOfStudents"})
+// })
+
 app.listen(2345, async function () {
     await connect();
     console.log("listening to server 2345")
