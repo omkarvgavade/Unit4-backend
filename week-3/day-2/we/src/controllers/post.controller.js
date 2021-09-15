@@ -23,4 +23,13 @@ router.get('/:id/comments', async (req, res) => {
     const comments = await Comment.find({ post_id: req.params.id }).lean().exec()
     res.status(200).json({ comments })
 })
+
+//to get user details from populating postId
+// const comments = await Comment.find().populate({
+//     path: "post_id",
+//     populate: {
+//         path: "user_id"
+//     }
+// }).lean().exec();
+
 module.exports = router;
