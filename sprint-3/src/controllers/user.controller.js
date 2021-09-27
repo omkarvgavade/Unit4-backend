@@ -47,4 +47,5 @@ const login = async (req, res) => {
 router.post("/login", login)
 router.post("/signup", upload.single("photo_url"), signup)
 
+
 module.exports = router;
