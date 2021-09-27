@@ -3,11 +3,12 @@ const User = require('../models/user.model')
 require('dotenv').config()
 const jwt = require('jsonwebtoken')
 const express = require('express');
-const router = express.router();
+const router = express.Router();
 const newToken = (user) => {
     return jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY)
 }
 const signup = async (req, res) => {
+    console.log(req.body)
     try {
         const user = await User.create(req.body)
         const token = newToken(user);
@@ -18,3 +19,5 @@ const signup = async (req, res) => {
     }
 }
 router.post("", signup)
+
+module.exports = router;
