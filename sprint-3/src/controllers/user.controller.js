@@ -8,7 +8,8 @@ router.post('/single', upload.single("productImages"), async (req, res) => {
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
-        photo_url: req.file.path
+        photo_url: req.file.path,
+        roles: req.body.roles,
     })
 
     return res.status(201).send({ user })
